@@ -1,0 +1,40 @@
+/* ----- Global: Style CSS ----- */
+
+/* Body */
+body {
+    background: #2F3542;
+    background-image: linear-gradient(to right top, #ffffff, #efeff5, #dedfec, #ccd0e2, #b9c2d9, #b9c2d9, #b9c2d9, #b9c2d9, #ccd0e2, #dedfec, #efeff5, #ffffff); /* background-image: https://mycolor.space */
+    min-height: 100vh;
+  }
+  
+  
+  /* Custom Global: scrollbar */
+  
+  /* Width */
+  ::-webkit-scrollbar {
+    width: 10px !important;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f2f6 !important;
+    border-radius: 5px !important;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a4b0be !important;
+    border-radius: 5px !important;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #57606f !important;
+    border-radius: 5px !important;
+  }
+  
+  
+  /* Custom Global: scrollbar (small) */
+  #scrollbar-small::-webkit-scrollbar {
+    width: 6px !important;
+  }
