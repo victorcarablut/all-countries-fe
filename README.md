@@ -1,3 +1,33 @@
+<img alt="img" src="https://code.victorcarablut.com/wp-content/uploads/2023/04/2023-04-25-e1682544323620.png" width="100%" />
+
+# Technologies:
+
+### This is `frontend`  . . . go to [backend](https://github.com/VictoR-11011994/all-countries-be)
+
+```
+// frontend
+React Js (v18)
+ - Axios
+ 
+-- Bootstrap CSS (v5)
+-- HTML, CSS, JS
+```
+
+```
+// IDE
+Visual Studio Code
+
+...better experience with: Microsoft Edge, Google Chrome
+```
+
+___
+
+`Developed for demonstration purposes only`
+
+> [code.victorcarablut.com](https://code.victorcarablut.com)
+
+___
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
