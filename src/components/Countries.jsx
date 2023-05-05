@@ -27,7 +27,7 @@ function Countries() {
 
         setResponseStatusGetAllCountries("loading");
 
-        await axios.get(`${url}/countries/all0`).then((res) => {
+        await axios.get(`${url}/countries/all`).then((res) => {
 
             if (res.status === 200) {
                 setResponseStatusGetAllCountries("success");
@@ -67,36 +67,58 @@ function Countries() {
 
     return (
 
-        <div className="container-fluid d-flex justify-content-center">
-
-            {responseStatusGetAllCountries === "loading" && <p className="text-secondary animate__animated animate__fadeIn animate__infinite">Loading...</p>}
-            {responseStatusGetAllCountries === "error" && <small className="text-danger">Error</small>}
-            {(countries?.length === 0 && responseStatusGetAllCountries === "success") && <small className="text-warning">Empty</small>}
+        <div className="d-flex justify-content-center">
+            <div className="container-fluid" style={{ maxWidth: 600 }}>
 
 
-            {(countries?.length !== 0 && responseStatusGetAllCountries !== "error") &&
-                <input type="text" id="search-country-input" className="form-control search-country-input rounded-pill" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
-            }
 
-            {countries?.length !== 0 &&
 
-                <div style={{ overflow: "scroll", maxHeight: "800px", width: "800px", maxWidth: "800px" }}>
-                    <table className="table table-dark table-hover" id="countries" style={{ maxWidth: "800px" }}>
-                        <tbody>
-                            {
+                {responseStatusGetAllCountries === "loading" && <p className="text-secondary animate__animated animate__fadeIn animate__infinite">Loading...</p>}
+                {responseStatusGetAllCountries === "error" && <small className="text-danger">Error</small>}
+                {(countries?.length === 0 && responseStatusGetAllCountries === "success") && <small className="text-warning">Empty</small>}
 
-                                countries?.map(country =>
-                                    <tr key={country.id} className="shadow">
-                                        <td><img src={`data:image/png;base64,${country.countryFlag}`} width="auto" height="30px" alt="flag" /> {country.countryName} - {country.countryAlpha2Code}</td>
-                                        <td><a href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search"></i></a></td>
-                                    </tr>
-                                )
-                            }
-                        </tbody>
-                    </table>
+
+                <div className="mb-3" style={{ maxWidth: 300 }}>
+                   
+                        {(countries?.length !== 0 && responseStatusGetAllCountries !== "error") &&
+                            <input type="text" id="search-country-input" className="form-control search-country-input rounded-pill shadow" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
+                        }
+                    
                 </div>
-            }
+
+
+
+
+
+                {countries?.length !== 0 &&
+
+                    <div className="card bg-transparent border-0 mb-3">
+                        <div className="card-body">
+
+                            <div id="scrollbar-small" style={{ overflow: "scroll", maxHeight: 1000, maxWidth: 600, overflowX: "auto", paddingRight: 20 }}>
+                                <table className="table bg-transparent table-hover" id="countries">
+                                    <tbody>
+                                        {
+
+                                            countries?.map(country =>
+                                                <tr key={country.id}>
+                                                    <td className="text-light"><img src={`data:image/png;base64,${country.countryFlag}`} width="auto" height="30px" alt="flag" /> {country.countryName} - {country.countryAlpha2Code}</td>
+                                                    <td><a href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search text-secondary"></i></a></td>
+                                                </tr>
+                                            )
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+
         </div>
+
 
     )
 }
