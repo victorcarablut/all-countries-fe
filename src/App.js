@@ -6,15 +6,11 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import NotFound from './components/other/NotFound';
 
-// Notifications
-import { Toaster } from 'react-hot-toast';
-
 
 function App() {
   return (
     <div>
       <Router>
-        <Toaster position="bottom-right" reverseOrder={false} />
         <main>
           <Routes>
             <Route path="/" exact element={<Home />} />

@@ -1,0 +1,15 @@
+/* footer */
+
+footer {
+    padding: 50px;
+  }
+  
+  .footer-url {
+    text-decoration: none;
+    color: #57606f;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .footer-url:hover {
+    color: #a4b0be;
+  }

@@ -1,8 +1,12 @@
-import React from 'react'
+import Countries from "./Countries"
+
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      Home
+      <Countries />
+    </div>
   )
 }
 
