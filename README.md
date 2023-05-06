@@ -1,6 +1,6 @@
 <img alt="img" src="https://code.victorcarablut.com/wp-content/uploads/2021/10/2023-05-07.png" width="100%" />
 
-# Technologies:
+# Technologies
 
 ### This is `frontend`  . . . go to [backend](https://github.com/VictoR-11011994/all-countries-be)
 
