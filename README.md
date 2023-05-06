@@ -2,7 +2,7 @@
 
 # Technologies
 
-### This is `frontend`  . . . go to [backend](https://github.com/VictoR-11011994/all-countries-be)
+### This is `frontend`  . . . go to [backend](https://github.com/victorcarablut/all-countries-be)
 
 ```
 // frontend
