@@ -78,10 +78,10 @@ function Countries() {
                 {(countries?.length === 0 && responseStatusGetAllCountries === "success") && <small className="text-warning">Empty</small>}
 
 
-                <div className="mb-3" style={{ maxWidth: 300 }}>
+                <div className="d-flex justify-content-center mb-3">
 
                     {(countries?.length !== 0 && responseStatusGetAllCountries !== "error") &&
-                        <input type="text" id="search-country-input" className="form-control search-table-input" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
+                        <input type="text" id="search-country-input" className="form-control search-table-input animate__animated animate__fadeInUp animate__delay-2s" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
                     }
 
                 </div>
@@ -102,8 +102,8 @@ function Countries() {
 
                                         countries?.map(country =>
                                             <tr key={country.id}>
-                                                <td className="text-light"><img className="me-md-2" src={`data:image/png;base64,${country.countryFlag}`} width="auto" height="30px" alt="flag" /><small aria-label={country.countryAlpha2Code} data-balloon-pos="right" >{country.countryName}</small></td>
-                                                <td aria-label="Read more on Google" data-balloon-pos="left"><a href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search text-secondary"></i></a></td>
+                                                <td className="text-light animate__animated animate__fadeInLeft animate__slow"><img className="me-md-2" src={country.countryFlag ? `data:image/png;base64,${country.countryFlag}` : default_country_img} width="auto" height="30" alt="flag" style={{ objectFit: "cover" }} /><small aria-label={country.countryAlpha2Code} data-balloon-pos="right" >{country.countryName}</small></td>
+                                                <td aria-label="Read more on Google" data-balloon-pos="left"><a className="animate__animated animate__fadeIn animate__slower" href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search text-secondary"></i></a></td>
                                             </tr>
                                         )
                                     }

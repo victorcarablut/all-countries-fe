@@ -8,9 +8,6 @@ import './assets/css/index.css';
 // Bootstrap (Default CSS)
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Bootstrap (Custom CSS)
-import './assets/css/custom-bootstrap.css';
-
 // Bootstrap JS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
