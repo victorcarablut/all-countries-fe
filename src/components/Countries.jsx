@@ -79,11 +79,11 @@ function Countries() {
 
 
                 <div className="mb-3" style={{ maxWidth: 300 }}>
-                   
-                        {(countries?.length !== 0 && responseStatusGetAllCountries !== "error") &&
-                            <input type="text" id="search-country-input" className="form-control search-country-input rounded-pill shadow" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
-                        }
-                    
+
+                    {(countries?.length !== 0 && responseStatusGetAllCountries !== "error") &&
+                        <input type="text" id="search-country-input" className="form-control search-table-input" onKeyUp={searchCountries} placeholder="Search..." autoComplete="off" />
+                    }
+
                 </div>
 
 
@@ -92,25 +92,25 @@ function Countries() {
 
                 {countries?.length !== 0 &&
 
-                    <div className="card bg-transparent border-0 mb-3">
-                        <div className="card-body">
+                    <div className="mb-3">
 
-                            <div id="scrollbar-small" style={{ overflow: "scroll", maxHeight: 1000, maxWidth: 600, overflowX: "auto", paddingRight: 20 }}>
-                                <table className="table bg-transparent table-hover" id="countries">
-                                    <tbody>
-                                        {
 
-                                            countries?.map(country =>
-                                                <tr key={country.id}>
-                                                    <td className="text-light"><img src={`data:image/png;base64,${country.countryFlag}`} width="auto" height="30px" alt="flag" /> {country.countryName} - {country.countryAlpha2Code}</td>
-                                                    <td><a href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search text-secondary"></i></a></td>
-                                                </tr>
-                                            )
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div id="scrollbar-small" style={{ overflow: "scroll", maxHeight: 1000, maxWidth: 600, overflowX: "auto", paddingRight: 20 }}>
+                            <table className="table bg-transparent table-hover" id="countries">
+                                <tbody>
+                                    {
+
+                                        countries?.map(country =>
+                                            <tr key={country.id}>
+                                                <td className="text-light"><img className="me-md-2" src={`data:image/png;base64,${country.countryFlag}`} width="auto" height="30px" alt="flag" /><small aria-label={country.countryAlpha2Code} data-balloon-pos="right" >{country.countryName}</small></td>
+                                                <td aria-label="Read more on Google" data-balloon-pos="left"><a href={`https://www.google.com/search?q=${country.countryName + " " + country.countryAlpha2Code}`} target="_blank" rel="noreferrer"><i className="bi bi-search text-secondary"></i></a></td>
+                                            </tr>
+                                        )
+                                    }
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
                 }
 

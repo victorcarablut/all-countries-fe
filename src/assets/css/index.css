@@ -17,13 +17,13 @@ body {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f2f6 !important;
+    background: rgba(0, 51, 255, 0) !important;
     border-radius: 5px !important;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #a4b0be !important;
+    background: #767f88 !important;
     border-radius: 5px !important;
   }
   
